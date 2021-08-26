@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="/main.css?v=10">
+    <title>generals</title>
+</head>
+
+<body>
+    <div id="menu" class="center center-tag">
+        <div style="margin-bottom:15px;"><input type="text" id="username-input" placeholder="Room ID" value=""></div>
+        <button id="enter-room">Enter room</button><br>
+        <button id="replays" class="small">Replays</button>
+    </div>
+    <script>
+        $('#enter-room').on('click', function () {
+            location.href = '/games/' + $('#username-input').val();
+        });
+        $('#replays').on('click', function () {
+            location.href = '/replays';
+        });
+    </script>
+</body>
+
+</html>
