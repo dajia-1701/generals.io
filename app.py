@@ -4,7 +4,7 @@ from flask_socketio import SocketIO, join_room, leave_room, emit
 import time, json, random, string, hashlib
 from game import Game
 
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__)
 socketio = SocketIO(app, async_mode='eventlet')
 
 game_uid = {}
@@ -369,4 +369,4 @@ def on_send_message(data):
 
 
 if __name__ == '__main__':
-	socketio.run(app, port=23333, host='0.0.0.0')
+	socketio.run(app, port=80, host='generals-io-copy.vercel.app')

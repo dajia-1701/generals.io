@@ -106,3 +106,4 @@ venv.bak/
 replays/*.json
 
 node_modules/
+.vercel
